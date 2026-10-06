@@ -1,6 +1,33 @@
 @CA_Futbol_HostAddress = http://localhost:5026
 
-GET {{CA_Futbol_HostAddress}}/weatherforecast/
+### Listar nacionalidades
+GET {{CA_Futbol_HostAddress}}/api/nacionalidad
 Accept: application/json
+
+### Obtener nacionalidad por ID
+GET {{CA_Futbol_HostAddress}}/api/nacionalidad/1
+Accept: application/json
+
+### Crear nacionalidad
+POST {{CA_Futbol_HostAddress}}/api/nacionalidad
+Content-Type: application/json
+
+{
+  "nombre": "Argentina",
+  "alias": "ARG"
+}
+
+### Actualizar nacionalidad
+PUT {{CA_Futbol_HostAddress}}/api/nacionalidad/1
+Content-Type: application/json
+
+{
+  "idNacionalidad": 1,
+  "nombre": "República Argentina",
+  "alias": "ARG"
+}
+
+### Eliminar nacionalidad
+DELETE {{CA_Futbol_HostAddress}}/api/nacionalidad/1
 
 ###
