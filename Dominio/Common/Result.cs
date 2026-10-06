@@ -14,7 +14,7 @@ public class Result
     
     public bool IsSuccess { get; }                                                                                                                                                 
     public bool IsFailure => !IsSuccess;                                                                                                                                           
-    public static Error Error { get; set; }
+    public Error Error { get; }
 
 
     public static Result Success() => new(true, Error.none);                                                                                                                       

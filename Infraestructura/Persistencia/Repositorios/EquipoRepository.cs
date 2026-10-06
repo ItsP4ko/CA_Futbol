@@ -38,18 +38,10 @@ public class EquipoRepository : IEquipoRepository
     }
     
 
-    public async Task<bool> CrearEquipoAsync(Equipo equipo)
+    public async Task CrearEquipoAsync(Equipo equipo)
     {
-        try
-        {
-            _context.Equipos.Add(equipo);
-            await _context.SaveChangesAsync();
-            return true;
-        }
-        catch (Exception e)
-        {
-            return false;
-        }
+        _context.Equipos.Add(equipo);
+        await _context.SaveChangesAsync();
     }
 
     public async Task<bool> EliminarEquipoAsync(int equipoId)

@@ -2,7 +2,7 @@ namespace Dominio.Common;
 
 public enum ErrorType { Failure, Validation, NotFound, Conflict }
 
-public sealed record Error(string Code, string Description, ErrorType Typ)
+public sealed record Error(string Code, string Description, ErrorType Type)
 {
     public static readonly Error none =  new Error(string.Empty, string.Empty, ErrorType.Failure);
     
